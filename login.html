@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> 
+    <script src="login.js"></script>
+   
+    
+</head>
+<body ng-app="loginApp" ng-controller="loginController">
+    
+<div class="container">
+<div class="col-sm-8 col-sm-offset-2">
+    <div class="page-header"><h1>Rackspace  angularJS</h1></div>
+   
+    <!-- FORM -->
+    <form name="userForm" ng-submit="submitForm()" ng-show="login">
+         <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" required="required" class="form-control" ng-model="login.username">
+        <span ng-show="errorUserName">{{errorUserName}}</span>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" required="required" class="form-control" ng-model="login.password">
+        <span ng-show="errorName">{{errorName}}</span>
+    </div>
+   
+    
+    <button type="submit" class="btn btn-primary">Login</button>
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <a href='' ng-click='signup()' >Sign up</a>
+    </form>
+    <form name="Authenticated view" ng-show="switch2">
+        <a ng-click="logout()">Logout</a>
+        <h3>Atlanta is the sprawling capital of Georgia. It played an important part in both the Civil War and the 1960s Civil Rights Movement. Atlanta History Center chronicles the city's past, and the Martin Luther King Jr. National Historic Site is dedicated to the African-American leader’s life and times. Downtown, 21-acre Centennial Olympic Park, built for the 1996 Olympics, encompasses the massive Georgia Aquarium.</h3>
+    </form>
+</div>
+</div>
+
+</body>
+</html>
